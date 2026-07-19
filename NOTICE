@@ -1,0 +1,13 @@
+kttf
+Copyright 2026 Houssam Elbadissi
+
+This product includes software derived from ttf-parser,
+Copyright 2018 Yevhenii Reizner and the ttf-parser contributors.
+https://github.com/harfbuzz/ttf-parser
+
+The derived portions are used under the Apache License, Version 2.0.
+See UPSTREAM.md for the exact upstream revision, porting status, and known
+deviations.
+
+This project is an independent Kotlin port and is not affiliated with or
+endorsed by the ttf-parser project or its contributors.

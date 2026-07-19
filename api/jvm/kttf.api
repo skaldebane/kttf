@@ -1,0 +1,1738 @@
+public final class dev/skaldebane/kttf/AatFeature {
+	public fun <init> (IIZILjava/util/List;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()Z
+	public final fun component4 ()I
+	public final fun component5 ()Ljava/util/List;
+	public final fun copy (IIZILjava/util/List;)Ldev/skaldebane/kttf/AatFeature;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/AatFeature;IIZILjava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/AatFeature;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDefaultSettingIndex ()I
+	public final fun getFeature ()I
+	public final fun getNameId ()I
+	public final fun getSettings ()Ljava/util/List;
+	public fun hashCode ()I
+	public final fun isExclusive ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/AatFeatureSetting {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/skaldebane/kttf/AatFeatureSetting;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/AatFeatureSetting;IIILjava/lang/Object;)Ldev/skaldebane/kttf/AatFeatureSetting;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getNameId ()I
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/AatMorxChain {
+	public final fun getDefaultFlags ()J
+	public final fun getFeatures ()Ldev/skaldebane/kttf/AatMorxFeatures;
+	public final fun getSubtables ()Ldev/skaldebane/kttf/AatMorxSubtables;
+}
+
+public final class dev/skaldebane/kttf/AatMorxChains : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/AatMorxChain;
+	public final fun getSize ()I
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public final class dev/skaldebane/kttf/AatMorxContextual : dev/skaldebane/kttf/AatMorxSubtableData {
+	public final fun getLookupCount ()I
+	public final fun getStateTable ()Ldev/skaldebane/kttf/AatStateTable;
+	public final fun substitution-gIZuvmo (II)Ldev/skaldebane/kttf/GlyphId;
+}
+
+public final class dev/skaldebane/kttf/AatMorxFeature {
+	public fun <init> (IIJJ)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()J
+	public final fun component4 ()J
+	public final fun copy (IIJJ)Ldev/skaldebane/kttf/AatMorxFeature;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/AatMorxFeature;IIJJILjava/lang/Object;)Ldev/skaldebane/kttf/AatMorxFeature;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDisableFlags ()J
+	public final fun getEnableFlags ()J
+	public final fun getKind ()I
+	public final fun getSetting ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/AatMorxFeatures : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/AatMorxFeature;
+	public final fun getSize ()I
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public final class dev/skaldebane/kttf/AatMorxInsertion : dev/skaldebane/kttf/AatMorxSubtableData {
+	public final fun getGlyphCount ()I
+	public final fun getStateTable ()Ldev/skaldebane/kttf/AatStateTable;
+	public final fun glyph-_AEdIAg (I)Ldev/skaldebane/kttf/GlyphId;
+}
+
+public final class dev/skaldebane/kttf/AatMorxKind : java/lang/Enum {
+	public static final field Contextual Ldev/skaldebane/kttf/AatMorxKind;
+	public static final field Insertion Ldev/skaldebane/kttf/AatMorxKind;
+	public static final field Ligature Ldev/skaldebane/kttf/AatMorxKind;
+	public static final field NonContextual Ldev/skaldebane/kttf/AatMorxKind;
+	public static final field Rearrangement Ldev/skaldebane/kttf/AatMorxKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/AatMorxKind;
+	public static fun values ()[Ldev/skaldebane/kttf/AatMorxKind;
+}
+
+public final class dev/skaldebane/kttf/AatMorxLigature : dev/skaldebane/kttf/AatMorxSubtableData {
+	public final fun action (I)Ljava/lang/Long;
+	public final fun component (I)Ljava/lang/Integer;
+	public final fun getActionCount ()I
+	public final fun getComponentCount ()I
+	public final fun getLigatureCount ()I
+	public final fun getStateTable ()Ldev/skaldebane/kttf/AatStateTable;
+	public final fun ligature-_AEdIAg (I)Ldev/skaldebane/kttf/GlyphId;
+}
+
+public final class dev/skaldebane/kttf/AatMorxNonContextual : dev/skaldebane/kttf/AatMorxSubtableData {
+	public final fun substitution-NdSWbRM (I)Ldev/skaldebane/kttf/GlyphId;
+}
+
+public final class dev/skaldebane/kttf/AatMorxRearrangement : dev/skaldebane/kttf/AatMorxSubtableData {
+	public final fun getStateTable ()Ldev/skaldebane/kttf/AatStateTable;
+}
+
+public final class dev/skaldebane/kttf/AatMorxSubtable {
+	public fun <init> (Ldev/skaldebane/kttf/AatMorxKind;JZZZZLdev/skaldebane/kttf/AatMorxSubtableData;)V
+	public final fun component1 ()Ldev/skaldebane/kttf/AatMorxKind;
+	public final fun component2 ()J
+	public final fun component3 ()Z
+	public final fun component4 ()Z
+	public final fun component5 ()Z
+	public final fun component6 ()Z
+	public final fun component7 ()Ldev/skaldebane/kttf/AatMorxSubtableData;
+	public final fun copy (Ldev/skaldebane/kttf/AatMorxKind;JZZZZLdev/skaldebane/kttf/AatMorxSubtableData;)Ldev/skaldebane/kttf/AatMorxSubtable;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/AatMorxSubtable;Ldev/skaldebane/kttf/AatMorxKind;JZZZZLdev/skaldebane/kttf/AatMorxSubtableData;ILjava/lang/Object;)Ldev/skaldebane/kttf/AatMorxSubtable;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ldev/skaldebane/kttf/AatMorxSubtableData;
+	public final fun getFeatureFlags ()J
+	public final fun getKind ()Ldev/skaldebane/kttf/AatMorxKind;
+	public fun hashCode ()I
+	public final fun isAllDirections ()Z
+	public final fun isBackwards ()Z
+	public final fun isLogical ()Z
+	public final fun isVertical ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class dev/skaldebane/kttf/AatMorxSubtableData {
+}
+
+public final class dev/skaldebane/kttf/AatMorxSubtables : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/AatMorxSubtable;
+	public final fun getSize ()I
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public final class dev/skaldebane/kttf/AatStateEntry {
+	public fun <init> (IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+	public synthetic fun <init> (IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ljava/lang/Integer;
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun component6 ()Ljava/lang/Integer;
+	public final fun component7 ()Ljava/lang/Integer;
+	public final fun copy (IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Ldev/skaldebane/kttf/AatStateEntry;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/AatStateEntry;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Ldev/skaldebane/kttf/AatStateEntry;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getActionIndex ()Ljava/lang/Integer;
+	public final fun getCurrentIndex ()Ljava/lang/Integer;
+	public final fun getCurrentInsertIndex ()Ljava/lang/Integer;
+	public final fun getFlags ()I
+	public final fun getHasAdvance ()Z
+	public final fun getHasMark ()Z
+	public final fun getHasOffset ()Z
+	public final fun getHasPush ()Z
+	public final fun getHasReset ()Z
+	public final fun getMarkIndex ()Ljava/lang/Integer;
+	public final fun getMarkedInsertIndex ()Ljava/lang/Integer;
+	public final fun getNewState ()I
+	public final fun getValueOffset ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/AatStateTable {
+	public final fun entry (II)Ldev/skaldebane/kttf/AatStateEntry;
+	public final fun getClassCount ()I
+	public final fun getEntryCount ()I
+	public final fun getStateCount ()I
+	public final fun glyphClass-bgPkbKQ (I)Ljava/lang/Integer;
+}
+
+public final class dev/skaldebane/kttf/AatTrack {
+	public fun <init> (FILjava/util/List;)V
+	public final fun component1 ()F
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/util/List;
+	public final fun copy (FILjava/util/List;)Ldev/skaldebane/kttf/AatTrack;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/AatTrack;FILjava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/AatTrack;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getNameId ()I
+	public final fun getPerSizeValues ()Ljava/util/List;
+	public final fun getValue ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/AppleLayout {
+	public final fun anchorPoints-bgPkbKQ (I)Ljava/util/List;
+	public final fun feature (I)Ldev/skaldebane/kttf/AatFeature;
+	public final fun featureByKind (I)Ldev/skaldebane/kttf/AatFeature;
+	public final fun getFeatureCount ()I
+	public final fun getMorxChains ()Ldev/skaldebane/kttf/AatMorxChains;
+	public final fun horizontalTrackSizes ()Ljava/util/List;
+	public final fun horizontalTracks ()Ljava/util/List;
+	public final fun morxNonContextualSubstitution-NdSWbRM (I)Ldev/skaldebane/kttf/GlyphId;
+	public final fun morxSubtables ()Ljava/util/List;
+	public final fun verticalTrackSizes ()Ljava/util/List;
+	public final fun verticalTracks ()Ljava/util/List;
+}
+
+public final class dev/skaldebane/kttf/Cmap {
+	public final fun getSubtables ()Ldev/skaldebane/kttf/CmapSubtables;
+}
+
+public final class dev/skaldebane/kttf/CmapFormat : java/lang/Enum {
+	public static final field ByteEncoding Ldev/skaldebane/kttf/CmapFormat;
+	public static final field HighByteMapping Ldev/skaldebane/kttf/CmapFormat;
+	public static final field ManyToOne Ldev/skaldebane/kttf/CmapFormat;
+	public static final field MixedCoverage Ldev/skaldebane/kttf/CmapFormat;
+	public static final field SegmentMapping Ldev/skaldebane/kttf/CmapFormat;
+	public static final field SegmentedCoverage Ldev/skaldebane/kttf/CmapFormat;
+	public static final field TrimmedArray Ldev/skaldebane/kttf/CmapFormat;
+	public static final field TrimmedMapping Ldev/skaldebane/kttf/CmapFormat;
+	public static final field UnicodeVariationSequences Ldev/skaldebane/kttf/CmapFormat;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()I
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/CmapFormat;
+	public static fun values ()[Ldev/skaldebane/kttf/CmapFormat;
+}
+
+public final class dev/skaldebane/kttf/CmapPlatformId : java/lang/Enum {
+	public static final field Custom Ldev/skaldebane/kttf/CmapPlatformId;
+	public static final field Iso Ldev/skaldebane/kttf/CmapPlatformId;
+	public static final field Macintosh Ldev/skaldebane/kttf/CmapPlatformId;
+	public static final field Unicode Ldev/skaldebane/kttf/CmapPlatformId;
+	public static final field Windows Ldev/skaldebane/kttf/CmapPlatformId;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/CmapPlatformId;
+	public static fun values ()[Ldev/skaldebane/kttf/CmapPlatformId;
+}
+
+public final class dev/skaldebane/kttf/CmapSubtable {
+	public final fun forEachCodePoint (Lkotlin/jvm/functions/Function1;)Z
+	public final fun getEncodingId ()I
+	public final fun getFormat ()Ldev/skaldebane/kttf/CmapFormat;
+	public final fun getPlatformId ()Ldev/skaldebane/kttf/CmapPlatformId;
+	public final fun glyphId-_AEdIAg (J)Ldev/skaldebane/kttf/GlyphId;
+	public final fun glyphVariation (JJ)Ldev/skaldebane/kttf/CmapVariationResult;
+	public final fun isUnicode ()Z
+}
+
+public final class dev/skaldebane/kttf/CmapSubtables : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/CmapSubtable;
+	public final fun getSize ()I
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public abstract interface class dev/skaldebane/kttf/CmapVariationResult {
+}
+
+public final class dev/skaldebane/kttf/CmapVariationResult$Found : dev/skaldebane/kttf/CmapVariationResult {
+	public synthetic fun <init> (ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-R4h9C_w ()I
+	public final fun copy-bgPkbKQ (I)Ldev/skaldebane/kttf/CmapVariationResult$Found;
+	public static synthetic fun copy-bgPkbKQ$default (Ldev/skaldebane/kttf/CmapVariationResult$Found;IILjava/lang/Object;)Ldev/skaldebane/kttf/CmapVariationResult$Found;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGlyphId-R4h9C_w ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/CmapVariationResult$UseDefault : dev/skaldebane/kttf/CmapVariationResult {
+	public static final field INSTANCE Ldev/skaldebane/kttf/CmapVariationResult$UseDefault;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/ColorClipBox {
+	public fun <init> (FFFF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun copy (FFFF)Ldev/skaldebane/kttf/ColorClipBox;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/ColorClipBox;FFFFILjava/lang/Object;)Ldev/skaldebane/kttf/ColorClipBox;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getXMax ()F
+	public final fun getXMin ()F
+	public final fun getYMax ()F
+	public final fun getYMin ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/ColorCompositeMode : java/lang/Enum {
+	public static final field Clear Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Color Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field ColorBurn Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field ColorDodge Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Darken Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Destination Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field DestinationAtop Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field DestinationIn Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field DestinationOut Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field DestinationOver Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Difference Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Exclusion Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field HardLight Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Hue Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Lighten Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Luminosity Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Multiply Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Overlay Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Plus Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Saturation Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Screen Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field SoftLight Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Source Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field SourceAtop Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field SourceIn Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field SourceOut Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field SourceOver Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static final field Xor Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/ColorCompositeMode;
+	public static fun values ()[Ldev/skaldebane/kttf/ColorCompositeMode;
+}
+
+public abstract interface class dev/skaldebane/kttf/ColorGlyphPainter {
+	public abstract fun outlineGlyph-bgPkbKQ (I)V
+	public abstract fun paint (Ldev/skaldebane/kttf/ColorPaint;)V
+	public abstract fun popClip ()V
+	public abstract fun popLayer ()V
+	public abstract fun popTransform ()V
+	public abstract fun pushClip ()V
+	public abstract fun pushClipBox (Ldev/skaldebane/kttf/ColorClipBox;)V
+	public abstract fun pushLayer (Ldev/skaldebane/kttf/ColorCompositeMode;)V
+	public abstract fun pushTransform (Ldev/skaldebane/kttf/FontTransform;)V
+}
+
+public abstract interface class dev/skaldebane/kttf/ColorPaint {
+}
+
+public final class dev/skaldebane/kttf/ColorPaint$LinearGradient : dev/skaldebane/kttf/ColorPaint {
+	public fun <init> (FFFFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()F
+	public final fun component6 ()F
+	public final fun component7 ()Ldev/skaldebane/kttf/GradientExtend;
+	public final fun component8 ()Ljava/util/List;
+	public final fun copy (FFFFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;)Ldev/skaldebane/kttf/ColorPaint$LinearGradient;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/ColorPaint$LinearGradient;FFFFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/ColorPaint$LinearGradient;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExtend ()Ldev/skaldebane/kttf/GradientExtend;
+	public final fun getStops ()Ljava/util/List;
+	public final fun getX0 ()F
+	public final fun getX1 ()F
+	public final fun getX2 ()F
+	public final fun getY0 ()F
+	public final fun getY1 ()F
+	public final fun getY2 ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/ColorPaint$RadialGradient : dev/skaldebane/kttf/ColorPaint {
+	public fun <init> (FFFFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()F
+	public final fun component6 ()F
+	public final fun component7 ()Ldev/skaldebane/kttf/GradientExtend;
+	public final fun component8 ()Ljava/util/List;
+	public final fun copy (FFFFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;)Ldev/skaldebane/kttf/ColorPaint$RadialGradient;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/ColorPaint$RadialGradient;FFFFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/ColorPaint$RadialGradient;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExtend ()Ldev/skaldebane/kttf/GradientExtend;
+	public final fun getRadius0 ()F
+	public final fun getRadius1 ()F
+	public final fun getStops ()Ljava/util/List;
+	public final fun getX0 ()F
+	public final fun getX1 ()F
+	public final fun getY0 ()F
+	public final fun getY1 ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/ColorPaint$Solid : dev/skaldebane/kttf/ColorPaint {
+	public fun <init> (Ldev/skaldebane/kttf/FontColor;)V
+	public final fun component1 ()Ldev/skaldebane/kttf/FontColor;
+	public final fun copy (Ldev/skaldebane/kttf/FontColor;)Ldev/skaldebane/kttf/ColorPaint$Solid;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/ColorPaint$Solid;Ldev/skaldebane/kttf/FontColor;ILjava/lang/Object;)Ldev/skaldebane/kttf/ColorPaint$Solid;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColor ()Ldev/skaldebane/kttf/FontColor;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/ColorPaint$SweepGradient : dev/skaldebane/kttf/ColorPaint {
+	public fun <init> (FFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()Ldev/skaldebane/kttf/GradientExtend;
+	public final fun component6 ()Ljava/util/List;
+	public final fun copy (FFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;)Ldev/skaldebane/kttf/ColorPaint$SweepGradient;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/ColorPaint$SweepGradient;FFFFLdev/skaldebane/kttf/GradientExtend;Ljava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/ColorPaint$SweepGradient;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCenterX ()F
+	public final fun getCenterY ()F
+	public final fun getEndAngle ()F
+	public final fun getExtend ()Ldev/skaldebane/kttf/GradientExtend;
+	public final fun getStartAngle ()F
+	public final fun getStops ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/ColorStop {
+	public fun <init> (FLdev/skaldebane/kttf/FontColor;)V
+	public final fun component1 ()F
+	public final fun component2 ()Ldev/skaldebane/kttf/FontColor;
+	public final fun copy (FLdev/skaldebane/kttf/FontColor;)Ldev/skaldebane/kttf/ColorStop;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/ColorStop;FLdev/skaldebane/kttf/FontColor;ILjava/lang/Object;)Ldev/skaldebane/kttf/ColorStop;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColor ()Ldev/skaldebane/kttf/FontColor;
+	public final fun getOffset ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/EmbeddingPermissions : java/lang/Enum {
+	public static final field Editable Ldev/skaldebane/kttf/EmbeddingPermissions;
+	public static final field Installable Ldev/skaldebane/kttf/EmbeddingPermissions;
+	public static final field PreviewAndPrint Ldev/skaldebane/kttf/EmbeddingPermissions;
+	public static final field Restricted Ldev/skaldebane/kttf/EmbeddingPermissions;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/EmbeddingPermissions;
+	public static fun values ()[Ldev/skaldebane/kttf/EmbeddingPermissions;
+}
+
+public final class dev/skaldebane/kttf/FeatureVariationCondition {
+	public fun <init> (IFF)V
+	public final fun component1 ()I
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun copy (IFF)Ldev/skaldebane/kttf/FeatureVariationCondition;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FeatureVariationCondition;IFFILjava/lang/Object;)Ldev/skaldebane/kttf/FeatureVariationCondition;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAxisIndex ()I
+	public final fun getMaximum ()F
+	public final fun getMinimum ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontBounds {
+	public fun <init> (IIII)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun contains (II)Z
+	public final fun copy (IIII)Ldev/skaldebane/kttf/FontBounds;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontBounds;IIIIILjava/lang/Object;)Ldev/skaldebane/kttf/FontBounds;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHeight ()I
+	public final fun getWidth ()I
+	public final fun getXMax ()I
+	public final fun getXMin ()I
+	public final fun getYMax ()I
+	public final fun getYMin ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontColor {
+	public fun <init> (IIII)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun copy (IIII)Ldev/skaldebane/kttf/FontColor;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontColor;IIIIILjava/lang/Object;)Ldev/skaldebane/kttf/FontColor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAlpha ()I
+	public final fun getBlue ()I
+	public final fun getGreen ()I
+	public final fun getRed ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontFace {
+	public static final field Companion Ldev/skaldebane/kttf/FontFace$Companion;
+	public final fun colorGlyphClipBox-bgPkbKQ (I)Ldev/skaldebane/kttf/ColorClipBox;
+	public final fun getAppleLayout ()Ldev/skaldebane/kttf/AppleLayout;
+	public final fun getAscender ()I
+	public final fun getBounds ()Ldev/skaldebane/kttf/FontBounds;
+	public final fun getCapitalHeight ()Ljava/lang/Integer;
+	public final fun getCffMatrix ()Ldev/skaldebane/kttf/FontTransform;
+	public final fun getCmap ()Ldev/skaldebane/kttf/Cmap;
+	public final fun getColorPaletteCount ()Ljava/lang/Integer;
+	public final fun getDescender ()I
+	public final fun getFaceCount ()I
+	public final fun getFaceIndex ()I
+	public final fun getGlyphCount ()I
+	public final fun getGlyphDefinitions ()Ldev/skaldebane/kttf/GlyphDefinitions;
+	public final fun getGlyphPositioning ()Ldev/skaldebane/kttf/GlyphPositioning;
+	public final fun getGlyphSubstitutions ()Ldev/skaldebane/kttf/GlyphSubstitutions;
+	public final fun getHasNonDefaultVariations ()Z
+	public final fun getHeight ()I
+	public final fun getHheaAscender ()I
+	public final fun getHheaDescender ()I
+	public final fun getHheaLineGap ()I
+	public final fun getItalicAngle ()F
+	public final fun getKerningSubtables ()Ldev/skaldebane/kttf/KerningSubtables;
+	public final fun getLineGap ()I
+	public final fun getMathLayout ()Ldev/skaldebane/kttf/MathLayout;
+	public final fun getNames ()Ldev/skaldebane/kttf/Names;
+	public final fun getParsedTables ()Ldev/skaldebane/kttf/ParsedFontTables;
+	public final fun getPermissions ()Ldev/skaldebane/kttf/EmbeddingPermissions;
+	public final fun getStrikeoutMetrics ()Ldev/skaldebane/kttf/FontLineMetrics;
+	public final fun getStyle ()Ldev/skaldebane/kttf/FontStyle;
+	public final fun getStyleAttributes ()Ldev/skaldebane/kttf/StyleAttributes;
+	public final fun getSubscriptMetrics ()Ldev/skaldebane/kttf/FontScriptMetrics;
+	public final fun getSuperscriptMetrics ()Ldev/skaldebane/kttf/FontScriptMetrics;
+	public final fun getTableRecords ()Ldev/skaldebane/kttf/FontTableRecords;
+	public final fun getTypographicAscender ()Ljava/lang/Integer;
+	public final fun getTypographicDescender ()Ljava/lang/Integer;
+	public final fun getTypographicLineGap ()Ljava/lang/Integer;
+	public final fun getUnderlineMetrics ()Ldev/skaldebane/kttf/FontLineMetrics;
+	public final fun getUnicodeRanges ()Ldev/skaldebane/kttf/UnicodeRanges;
+	public final fun getUnitsPerEm ()I
+	public final fun getVariationAxes ()Ldev/skaldebane/kttf/FontVariationAxes;
+	public final fun getVariationCoordinates ()Ljava/util/List;
+	public final fun getVariationInstances ()Ldev/skaldebane/kttf/FontVariationInstances;
+	public final fun getVerticalHeight ()Ljava/lang/Integer;
+	public final fun getVheaAscender ()Ljava/lang/Integer;
+	public final fun getVheaDescender ()Ljava/lang/Integer;
+	public final fun getVheaLineGap ()Ljava/lang/Integer;
+	public final fun getWeight-6JRxpBc ()I
+	public final fun getWidth ()Ldev/skaldebane/kttf/FontWidth;
+	public final fun getWindowsAscender ()Ljava/lang/Integer;
+	public final fun getWindowsDescender ()Ljava/lang/Integer;
+	public final fun getXHeight ()Ljava/lang/Integer;
+	public final fun glyphBoundingBox-bgPkbKQ (I)Ldev/skaldebane/kttf/FontBounds;
+	public final fun glyphCffWidth-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun glyphCid-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun glyphHorizontalAdvance-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun glyphHorizontalSideBearing-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun glyphId-_AEdIAg (C)Ldev/skaldebane/kttf/GlyphId;
+	public final fun glyphId-_AEdIAg (I)Ldev/skaldebane/kttf/GlyphId;
+	public final fun glyphIdByName-_AEdIAg (Ljava/lang/String;)Ldev/skaldebane/kttf/GlyphId;
+	public final fun glyphIdFromCffCode-_AEdIAg (I)Ldev/skaldebane/kttf/GlyphId;
+	public final fun glyphName-bgPkbKQ (I)Ljava/lang/String;
+	public final fun glyphPhantomPoints-bgPkbKQ (I)Ldev/skaldebane/kttf/GlyphPhantomPoints;
+	public final fun glyphVariationId-AF-YIh8 (II)Ldev/skaldebane/kttf/GlyphId;
+	public final fun glyphVerticalAdvance-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun glyphVerticalOrigin-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun glyphVerticalSideBearing-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun isBold ()Z
+	public final fun isColorGlyph-bgPkbKQ (I)Z
+	public final fun isItalic ()Z
+	public final fun isMonospaced ()Z
+	public final fun isOblique ()Z
+	public final fun isOutlineEmbeddingAllowed ()Z
+	public final fun isRegular ()Z
+	public final fun isSimpleColorGlyph-bgPkbKQ (I)Z
+	public final fun isSubsettingAllowed ()Z
+	public final fun isVariable ()Z
+	public final fun metricVariation-laVSPTA (I)Ljava/lang/Float;
+	public final fun outlineGlyph-BJ3L-QM (ILdev/skaldebane/kttf/OutlineSink;)Ldev/skaldebane/kttf/FontBounds;
+	public final fun paintColorGlyph-Zk5rGl4 (IILdev/skaldebane/kttf/FontColor;Ldev/skaldebane/kttf/ColorGlyphPainter;)Z
+	public final fun paletteColor (II)Ldev/skaldebane/kttf/FontColor;
+	public final fun rasterGlyph-BJ3L-QM (II)Ldev/skaldebane/kttf/GlyphRasterImage;
+	public final fun svgGlyph-bgPkbKQ (I)Ldev/skaldebane/kttf/SvgGlyphDocument;
+	public final fun table-laVSPTA (I)Ldev/skaldebane/kttf/FontTable;
+	public final fun withVariations (Ljava/util/Map;)Ldev/skaldebane/kttf/FontFace;
+}
+
+public final class dev/skaldebane/kttf/FontFace$Companion {
+	public final fun fromTables (Ljava/util/Map;)Ldev/skaldebane/kttf/FontFace;
+	public final fun fromTablesOrNull (Ljava/util/Map;)Ldev/skaldebane/kttf/FontFace;
+	public final fun parse ([B)Ldev/skaldebane/kttf/FontFace;
+	public final fun parse ([BI)Ldev/skaldebane/kttf/FontFace;
+	public final fun parseOrNull ([B)Ldev/skaldebane/kttf/FontFace;
+	public final fun parseOrNull ([BI)Ldev/skaldebane/kttf/FontFace;
+}
+
+public final class dev/skaldebane/kttf/FontFaceKt {
+	public static final fun fontsInCollection ([B)Ljava/lang/Long;
+}
+
+public final class dev/skaldebane/kttf/FontLanguage {
+	public static final field Companion Ldev/skaldebane/kttf/FontLanguage$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/skaldebane/kttf/FontLanguage;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontLanguage;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/skaldebane/kttf/FontLanguage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPrimaryLanguage ()Ljava/lang/String;
+	public final fun getRegion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontLanguage$Companion {
+	public final fun getEnglishUnitedStates ()Ldev/skaldebane/kttf/FontLanguage;
+	public final fun getUnknown ()Ldev/skaldebane/kttf/FontLanguage;
+}
+
+public final class dev/skaldebane/kttf/FontLineMetrics {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/skaldebane/kttf/FontLineMetrics;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontLineMetrics;IIILjava/lang/Object;)Ldev/skaldebane/kttf/FontLineMetrics;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPosition ()I
+	public final fun getThickness ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontName {
+	public final fun copyBytesInto ([BI)[B
+	public static synthetic fun copyBytesInto$default (Ldev/skaldebane/kttf/FontName;[BIILjava/lang/Object;)[B
+	public final fun decodeLanguageTag ()Ljava/lang/String;
+	public final fun decodeToString ()Ljava/lang/String;
+	public final fun getByteLength ()I
+	public final fun getEncodingId ()I
+	public final fun getLanguage ()Ldev/skaldebane/kttf/FontLanguage;
+	public final fun getLanguageId ()I
+	public final fun getNameId ()I
+	public final fun getPlatformId ()Ldev/skaldebane/kttf/NamePlatformId;
+	public final fun isUnicode ()Z
+}
+
+public final class dev/skaldebane/kttf/FontParsingError : java/lang/Enum {
+	public static final field FaceIndexOutOfBounds Ldev/skaldebane/kttf/FontParsingError;
+	public static final field MalformedFont Ldev/skaldebane/kttf/FontParsingError;
+	public static final field MissingOrMalformedHead Ldev/skaldebane/kttf/FontParsingError;
+	public static final field MissingOrMalformedHorizontalHeader Ldev/skaldebane/kttf/FontParsingError;
+	public static final field MissingOrMalformedMaximumProfile Ldev/skaldebane/kttf/FontParsingError;
+	public static final field UnknownMagic Ldev/skaldebane/kttf/FontParsingError;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/FontParsingError;
+	public static fun values ()[Ldev/skaldebane/kttf/FontParsingError;
+}
+
+public final class dev/skaldebane/kttf/FontParsingException : java/lang/IllegalArgumentException {
+	public final fun getError ()Ldev/skaldebane/kttf/FontParsingError;
+}
+
+public final class dev/skaldebane/kttf/FontPoint {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/skaldebane/kttf/FontPoint;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontPoint;IIILjava/lang/Object;)Ldev/skaldebane/kttf/FontPoint;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getX ()I
+	public final fun getY ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontPointF {
+	public fun <init> (FF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun copy (FF)Ldev/skaldebane/kttf/FontPointF;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontPointF;FFILjava/lang/Object;)Ldev/skaldebane/kttf/FontPointF;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getX ()F
+	public final fun getY ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontScriptMetrics {
+	public fun <init> (IIII)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun copy (IIII)Ldev/skaldebane/kttf/FontScriptMetrics;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontScriptMetrics;IIIIILjava/lang/Object;)Ldev/skaldebane/kttf/FontScriptMetrics;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getXOffset ()I
+	public final fun getXSize ()I
+	public final fun getYOffset ()I
+	public final fun getYSize ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontStyle : java/lang/Enum {
+	public static final field Italic Ldev/skaldebane/kttf/FontStyle;
+	public static final field Normal Ldev/skaldebane/kttf/FontStyle;
+	public static final field Oblique Ldev/skaldebane/kttf/FontStyle;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/FontStyle;
+	public static fun values ()[Ldev/skaldebane/kttf/FontStyle;
+}
+
+public final class dev/skaldebane/kttf/FontTable {
+	public final fun copyInto ([BIII)[B
+	public static synthetic fun copyInto$default (Ldev/skaldebane/kttf/FontTable;[BIIIILjava/lang/Object;)[B
+	public final fun get (I)B
+	public final fun getSize ()I
+	public final fun getTag-rAweNRQ ()I
+}
+
+public final class dev/skaldebane/kttf/FontTableRecord {
+	public synthetic fun <init> (IJJJLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-rAweNRQ ()I
+	public final fun component2 ()J
+	public final fun component3 ()J
+	public final fun component4 ()J
+	public final fun copy-_sl6F-M (IJJJ)Ldev/skaldebane/kttf/FontTableRecord;
+	public static synthetic fun copy-_sl6F-M$default (Ldev/skaldebane/kttf/FontTableRecord;IJJJILjava/lang/Object;)Ldev/skaldebane/kttf/FontTableRecord;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()J
+	public final fun getLength ()J
+	public final fun getOffset ()J
+	public final fun getTag-rAweNRQ ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontTableRecords : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/FontTableRecord;
+	public final fun getSize ()I
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public final class dev/skaldebane/kttf/FontTransform {
+	public fun <init> (FFFFFF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()F
+	public final fun component6 ()F
+	public final fun copy (FFFFFF)Ldev/skaldebane/kttf/FontTransform;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontTransform;FFFFFFILjava/lang/Object;)Ldev/skaldebane/kttf/FontTransform;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getA ()F
+	public final fun getB ()F
+	public final fun getC ()F
+	public final fun getD ()F
+	public final fun getE ()F
+	public final fun getF ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontVariationAxes : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/FontVariationAxis;
+	public final fun getSize ()I
+	public final fun isEmpty ()Z
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public final class dev/skaldebane/kttf/FontVariationAxis {
+	public synthetic fun <init> (IFFFIZLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-rAweNRQ ()I
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()I
+	public final fun component6 ()Z
+	public final fun copy-5YKmbxU (IFFFIZ)Ldev/skaldebane/kttf/FontVariationAxis;
+	public static synthetic fun copy-5YKmbxU$default (Ldev/skaldebane/kttf/FontVariationAxis;IFFFIZILjava/lang/Object;)Ldev/skaldebane/kttf/FontVariationAxis;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDefault ()F
+	public final fun getMaximum ()F
+	public final fun getMinimum ()F
+	public final fun getNameId ()I
+	public final fun getTag-rAweNRQ ()I
+	public fun hashCode ()I
+	public final fun isHidden ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontVariationInstance {
+	public fun <init> (IILjava/util/List;Ljava/lang/Integer;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/lang/Integer;
+	public final fun copy (IILjava/util/List;Ljava/lang/Integer;)Ldev/skaldebane/kttf/FontVariationInstance;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/FontVariationInstance;IILjava/util/List;Ljava/lang/Integer;ILjava/lang/Object;)Ldev/skaldebane/kttf/FontVariationInstance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCoordinates ()Ljava/util/List;
+	public final fun getFlags ()I
+	public final fun getPostScriptNameId ()Ljava/lang/Integer;
+	public final fun getSubfamilyNameId ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/FontVariationInstances : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/FontVariationInstance;
+	public final fun getSize ()I
+	public final fun isEmpty ()Z
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public final class dev/skaldebane/kttf/FontWeight {
+	public static final field Companion Ldev/skaldebane/kttf/FontWeight$Companion;
+	public static final synthetic fun box-impl (I)Ldev/skaldebane/kttf/FontWeight;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/skaldebane/kttf/FontWeight$Companion {
+	public final fun getBold-6JRxpBc ()I
+	public final fun getNormal-6JRxpBc ()I
+}
+
+public final class dev/skaldebane/kttf/FontWidth : java/lang/Enum {
+	public static final field Condensed Ldev/skaldebane/kttf/FontWidth;
+	public static final field Expanded Ldev/skaldebane/kttf/FontWidth;
+	public static final field ExtraCondensed Ldev/skaldebane/kttf/FontWidth;
+	public static final field ExtraExpanded Ldev/skaldebane/kttf/FontWidth;
+	public static final field Normal Ldev/skaldebane/kttf/FontWidth;
+	public static final field SemiCondensed Ldev/skaldebane/kttf/FontWidth;
+	public static final field SemiExpanded Ldev/skaldebane/kttf/FontWidth;
+	public static final field UltraCondensed Ldev/skaldebane/kttf/FontWidth;
+	public static final field UltraExpanded Ldev/skaldebane/kttf/FontWidth;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()I
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/FontWidth;
+	public static fun values ()[Ldev/skaldebane/kttf/FontWidth;
+}
+
+public final class dev/skaldebane/kttf/GlyphDefinitionClass : java/lang/Enum {
+	public static final field Base Ldev/skaldebane/kttf/GlyphDefinitionClass;
+	public static final field Component Ldev/skaldebane/kttf/GlyphDefinitionClass;
+	public static final field Ligature Ldev/skaldebane/kttf/GlyphDefinitionClass;
+	public static final field Mark Ldev/skaldebane/kttf/GlyphDefinitionClass;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/GlyphDefinitionClass;
+	public static fun values ()[Ldev/skaldebane/kttf/GlyphDefinitionClass;
+}
+
+public final class dev/skaldebane/kttf/GlyphDefinitions {
+	public final fun getHasGlyphClasses ()Z
+	public final fun glyphClass-bgPkbKQ (I)Ldev/skaldebane/kttf/GlyphDefinitionClass;
+	public final fun isMarkGlyph-BJ3L-QM (ILjava/lang/Integer;)Z
+	public static synthetic fun isMarkGlyph-BJ3L-QM$default (Ldev/skaldebane/kttf/GlyphDefinitions;ILjava/lang/Integer;ILjava/lang/Object;)Z
+	public final fun markAttachmentClass-bgPkbKQ (I)I
+	public final fun variationDelta (II)Ljava/lang/Float;
+}
+
+public final class dev/skaldebane/kttf/GlyphId {
+	public static final synthetic fun box-impl (I)Ldev/skaldebane/kttf/GlyphId;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/skaldebane/kttf/GlyphPhantomPoints {
+	public fun <init> (Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;)V
+	public final fun component1 ()Ldev/skaldebane/kttf/FontPointF;
+	public final fun component2 ()Ldev/skaldebane/kttf/FontPointF;
+	public final fun component3 ()Ldev/skaldebane/kttf/FontPointF;
+	public final fun component4 ()Ldev/skaldebane/kttf/FontPointF;
+	public final fun copy (Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;)Ldev/skaldebane/kttf/GlyphPhantomPoints;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/GlyphPhantomPoints;Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;Ldev/skaldebane/kttf/FontPointF;ILjava/lang/Object;)Ldev/skaldebane/kttf/GlyphPhantomPoints;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBottom ()Ldev/skaldebane/kttf/FontPointF;
+	public final fun getLeft ()Ldev/skaldebane/kttf/FontPointF;
+	public final fun getRight ()Ldev/skaldebane/kttf/FontPointF;
+	public final fun getTop ()Ldev/skaldebane/kttf/FontPointF;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/GlyphPositionAdjustment {
+	public fun <init> ()V
+	public fun <init> (IIIILdev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;)V
+	public synthetic fun <init> (IIIILdev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun component5 ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun component6 ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun component7 ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun component8 ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun copy (IIIILdev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;)Ldev/skaldebane/kttf/GlyphPositionAdjustment;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/GlyphPositionAdjustment;IIIILdev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;ILjava/lang/Object;)Ldev/skaldebane/kttf/GlyphPositionAdjustment;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getXAdvance ()I
+	public final fun getXAdvanceDevice ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun getXPlacement ()I
+	public final fun getXPlacementDevice ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun getYAdvance ()I
+	public final fun getYAdvanceDevice ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun getYPlacement ()I
+	public final fun getYPlacementDevice ()Ldev/skaldebane/kttf/LayoutDevice;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/GlyphPositioning : dev/skaldebane/kttf/OpenTypeLayout {
+	public final fun adjustment-Wk8KM2E (II)Ldev/skaldebane/kttf/GlyphPositionAdjustment;
+	public fun feature (I)Ldev/skaldebane/kttf/LayoutFeature;
+	public fun feature-laVSPTA (I)Ldev/skaldebane/kttf/LayoutFeature;
+	public fun featureSubstitution (II)Ldev/skaldebane/kttf/LayoutFeature;
+	public fun featureVariationCondition (II)Ldev/skaldebane/kttf/FeatureVariationCondition;
+	public fun featureVariationConditionCount (I)Ljava/lang/Integer;
+	public fun getFeatureCount ()I
+	public fun getFeatureVariationCount ()I
+	public fun getLookupCount ()I
+	public fun getScriptCount ()I
+	public fun lookup (I)Ldev/skaldebane/kttf/LayoutLookup;
+	public fun matchingFeatureVariationIndex ()Ljava/lang/Integer;
+	public final fun pairAdjustment-a8yFf-Y (III)Lkotlin/Pair;
+	public fun script (I)Ldev/skaldebane/kttf/LayoutScript;
+	public fun script-laVSPTA (I)Ldev/skaldebane/kttf/LayoutScript;
+	public final fun subtable (II)Ldev/skaldebane/kttf/GlyphPositioningSubtable;
+}
+
+public final class dev/skaldebane/kttf/GlyphPositioningKind : java/lang/Enum {
+	public static final field ChainedContext Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static final field Context Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static final field Cursive Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static final field MarkToBase Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static final field MarkToLigature Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static final field MarkToMark Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static final field Pair Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static final field Single Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public static fun values ()[Ldev/skaldebane/kttf/GlyphPositioningKind;
+}
+
+public final class dev/skaldebane/kttf/GlyphPositioningSubtable {
+	public final fun adjustment-bgPkbKQ (I)Ldev/skaldebane/kttf/GlyphPositionAdjustment;
+	public final fun baseAnchor-BJ3L-QM (II)Ldev/skaldebane/kttf/LayoutAnchor;
+	public final fun chainedContext ()Ldev/skaldebane/kttf/LayoutChainedContext;
+	public final fun context ()Ldev/skaldebane/kttf/LayoutContext;
+	public final fun entryAnchor-bgPkbKQ (I)Ldev/skaldebane/kttf/LayoutAnchor;
+	public final fun exitAnchor-bgPkbKQ (I)Ldev/skaldebane/kttf/LayoutAnchor;
+	public final fun getAttachmentCoverage ()Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun getCoverage ()Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun getKind ()Ldev/skaldebane/kttf/GlyphPositioningKind;
+	public final fun ligatureAnchor-jwWnjI4 (III)Ldev/skaldebane/kttf/LayoutAnchor;
+	public final fun mark2Anchor-BJ3L-QM (II)Ldev/skaldebane/kttf/LayoutAnchor;
+	public final fun markAnchor-bgPkbKQ (I)Ldev/skaldebane/kttf/MarkAnchor;
+	public final fun pairAdjustment-jE1fOhU (II)Lkotlin/Pair;
+}
+
+public final class dev/skaldebane/kttf/GlyphRasterData {
+	public final fun copyInto ([BI)[B
+	public static synthetic fun copyInto$default (Ldev/skaldebane/kttf/GlyphRasterData;[BIILjava/lang/Object;)[B
+	public final fun get (I)B
+	public final fun getSize ()I
+}
+
+public final class dev/skaldebane/kttf/GlyphRasterFormat : java/lang/Enum {
+	public static final field Gray2 Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static final field Gray4 Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static final field Gray8 Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static final field Monochrome Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static final field PackedGray2 Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static final field PackedGray4 Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static final field PackedMonochrome Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static final field Png Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static final field PremultipliedBgra32 Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public static fun values ()[Ldev/skaldebane/kttf/GlyphRasterFormat;
+}
+
+public final class dev/skaldebane/kttf/GlyphRasterImage {
+	public fun <init> (IIIIILdev/skaldebane/kttf/GlyphRasterFormat;Ldev/skaldebane/kttf/GlyphRasterData;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun component5 ()I
+	public final fun component6 ()Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public final fun component7 ()Ldev/skaldebane/kttf/GlyphRasterData;
+	public final fun copy (IIIIILdev/skaldebane/kttf/GlyphRasterFormat;Ldev/skaldebane/kttf/GlyphRasterData;)Ldev/skaldebane/kttf/GlyphRasterImage;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/GlyphRasterImage;IIIIILdev/skaldebane/kttf/GlyphRasterFormat;Ldev/skaldebane/kttf/GlyphRasterData;ILjava/lang/Object;)Ldev/skaldebane/kttf/GlyphRasterImage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ldev/skaldebane/kttf/GlyphRasterData;
+	public final fun getFormat ()Ldev/skaldebane/kttf/GlyphRasterFormat;
+	public final fun getHeight ()I
+	public final fun getPixelsPerEm ()I
+	public final fun getWidth ()I
+	public final fun getX ()I
+	public final fun getY ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/GlyphSubstitutionKind : java/lang/Enum {
+	public static final field Alternate Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public static final field ChainedContext Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public static final field Context Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public static final field Ligature Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public static final field Multiple Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public static final field ReverseChainedSingle Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public static final field Single Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public static fun values ()[Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+}
+
+public final class dev/skaldebane/kttf/GlyphSubstitutionSubtable {
+	public final fun alternates-bgPkbKQ (I)Ljava/util/List;
+	public final fun chainedContext ()Ldev/skaldebane/kttf/LayoutChainedContext;
+	public final fun context ()Ldev/skaldebane/kttf/LayoutContext;
+	public final fun getCoverage ()Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun getKind ()Ldev/skaldebane/kttf/GlyphSubstitutionKind;
+	public final fun getReverseBacktrackCoverageCount ()I
+	public final fun getReverseLookaheadCoverageCount ()I
+	public final fun ligatures-bgPkbKQ (I)Ljava/util/List;
+	public final fun multipleSubstitution-bgPkbKQ (I)Ljava/util/List;
+	public final fun reverseBacktrackCoverage (I)Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun reverseLookaheadCoverage (I)Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun reverseSubstitution-NdSWbRM (I)Ldev/skaldebane/kttf/GlyphId;
+	public final fun substitute-NdSWbRM (I)Ldev/skaldebane/kttf/GlyphId;
+}
+
+public final class dev/skaldebane/kttf/GlyphSubstitutions : dev/skaldebane/kttf/OpenTypeLayout {
+	public final fun alternates-Wk8KM2E (II)Ljava/util/List;
+	public fun feature (I)Ldev/skaldebane/kttf/LayoutFeature;
+	public fun feature-laVSPTA (I)Ldev/skaldebane/kttf/LayoutFeature;
+	public fun featureSubstitution (II)Ldev/skaldebane/kttf/LayoutFeature;
+	public fun featureVariationCondition (II)Ldev/skaldebane/kttf/FeatureVariationCondition;
+	public fun featureVariationConditionCount (I)Ljava/lang/Integer;
+	public fun getFeatureCount ()I
+	public fun getFeatureVariationCount ()I
+	public fun getLookupCount ()I
+	public fun getScriptCount ()I
+	public fun lookup (I)Ldev/skaldebane/kttf/LayoutLookup;
+	public fun matchingFeatureVariationIndex ()Ljava/lang/Integer;
+	public final fun multipleSubstitution-Wk8KM2E (II)Ljava/util/List;
+	public fun script (I)Ldev/skaldebane/kttf/LayoutScript;
+	public fun script-laVSPTA (I)Ldev/skaldebane/kttf/LayoutScript;
+	public final fun substitute-gIZuvmo (II)Ldev/skaldebane/kttf/GlyphId;
+	public final fun subtable (II)Ldev/skaldebane/kttf/GlyphSubstitutionSubtable;
+}
+
+public final class dev/skaldebane/kttf/GradientExtend : java/lang/Enum {
+	public static final field Pad Ldev/skaldebane/kttf/GradientExtend;
+	public static final field Reflect Ldev/skaldebane/kttf/GradientExtend;
+	public static final field Repeat Ldev/skaldebane/kttf/GradientExtend;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/GradientExtend;
+	public static fun values ()[Ldev/skaldebane/kttf/GradientExtend;
+}
+
+public final class dev/skaldebane/kttf/KerningAnchor {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/skaldebane/kttf/KerningAnchor;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/KerningAnchor;IIILjava/lang/Object;)Ldev/skaldebane/kttf/KerningAnchor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCurrentPointIndex ()I
+	public final fun getMarkPointIndex ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/KerningFormat : java/lang/Enum {
+	public static final field Anchor Ldev/skaldebane/kttf/KerningFormat;
+	public static final field Class Ldev/skaldebane/kttf/KerningFormat;
+	public static final field CompactClass Ldev/skaldebane/kttf/KerningFormat;
+	public static final field ExtendedClass Ldev/skaldebane/kttf/KerningFormat;
+	public static final field Pair Ldev/skaldebane/kttf/KerningFormat;
+	public static final field StateMachine Ldev/skaldebane/kttf/KerningFormat;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/KerningFormat;
+	public static fun values ()[Ldev/skaldebane/kttf/KerningFormat;
+}
+
+public final class dev/skaldebane/kttf/KerningPair {
+	public synthetic fun <init> (IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-R4h9C_w ()I
+	public final fun component2-R4h9C_w ()I
+	public final fun component3 ()I
+	public final fun copy-PBJRfxo (III)Ldev/skaldebane/kttf/KerningPair;
+	public static synthetic fun copy-PBJRfxo$default (Ldev/skaldebane/kttf/KerningPair;IIIILjava/lang/Object;)Ldev/skaldebane/kttf/KerningPair;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLeftGlyph-R4h9C_w ()I
+	public final fun getRightGlyph-R4h9C_w ()I
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/KerningStateEntry {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/skaldebane/kttf/KerningStateEntry;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/KerningStateEntry;IIILjava/lang/Object;)Ldev/skaldebane/kttf/KerningStateEntry;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getActionOffset ()I
+	public final fun getFlags ()I
+	public final fun getHasAdvance ()Z
+	public final fun getHasOffset ()Z
+	public final fun getHasPush ()Z
+	public final fun getHasReset ()Z
+	public final fun getNewState ()I
+	public final fun getNextActionOffset ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/KerningStateTable {
+	public final fun action (I)Ljava/lang/Integer;
+	public final fun entry (II)Ldev/skaldebane/kttf/KerningStateEntry;
+	public final fun getActionCount ()I
+	public final fun getClassCount ()I
+	public final fun getEntryCount ()I
+	public final fun getStateCount ()I
+	public final fun glyphClass-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun normalizedState (I)I
+}
+
+public final class dev/skaldebane/kttf/KerningSubtable {
+	public final fun action (I)Ljava/lang/Integer;
+	public final fun anchor (I)Ldev/skaldebane/kttf/KerningAnchor;
+	public final fun getActionCount ()I
+	public final fun getAnchorCount ()I
+	public final fun getExtendedStateTable ()Ldev/skaldebane/kttf/AatStateTable;
+	public final fun getInfo ()Ldev/skaldebane/kttf/KerningSubtableInfo;
+	public final fun getPairCount ()I
+	public final fun getStateTable ()Ldev/skaldebane/kttf/KerningStateTable;
+	public final fun getTupleCount ()J
+	public final fun kerning-jE1fOhU (II)Ljava/lang/Integer;
+	public final fun pair (I)Ldev/skaldebane/kttf/KerningPair;
+}
+
+public final class dev/skaldebane/kttf/KerningSubtableInfo {
+	public fun <init> (ZZZZLdev/skaldebane/kttf/KerningFormat;)V
+	public final fun component1 ()Z
+	public final fun component2 ()Z
+	public final fun component3 ()Z
+	public final fun component4 ()Z
+	public final fun component5 ()Ldev/skaldebane/kttf/KerningFormat;
+	public final fun copy (ZZZZLdev/skaldebane/kttf/KerningFormat;)Ldev/skaldebane/kttf/KerningSubtableInfo;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/KerningSubtableInfo;ZZZZLdev/skaldebane/kttf/KerningFormat;ILjava/lang/Object;)Ldev/skaldebane/kttf/KerningSubtableInfo;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCrossStream ()Z
+	public final fun getFormat ()Ldev/skaldebane/kttf/KerningFormat;
+	public final fun getHorizontal ()Z
+	public final fun getStateMachine ()Z
+	public final fun getVariable ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/KerningSubtables : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/KerningSubtable;
+	public final fun getSize ()I
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public final class dev/skaldebane/kttf/LayoutAnchor {
+	public fun <init> (IILjava/lang/Integer;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun component5 ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun copy (IILjava/lang/Integer;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;)Ldev/skaldebane/kttf/LayoutAnchor;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/LayoutAnchor;IILjava/lang/Integer;Ldev/skaldebane/kttf/LayoutDevice;Ldev/skaldebane/kttf/LayoutDevice;ILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutAnchor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContourPoint ()Ljava/lang/Integer;
+	public final fun getX ()I
+	public final fun getXDevice ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun getY ()I
+	public final fun getYDevice ()Ldev/skaldebane/kttf/LayoutDevice;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LayoutChainedContext {
+	public final fun backtrackClass-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun backtrackCoverage (I)Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun coverageLookups ()Ljava/util/List;
+	public final fun getBacktrackCoverageCount ()I
+	public final fun getCoverage ()Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun getFormat ()Ldev/skaldebane/kttf/LayoutContextFormat;
+	public final fun getInputCoverageCount ()I
+	public final fun getLookaheadCoverageCount ()I
+	public final fun getRuleSetCount ()I
+	public final fun inputClass-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun inputCoverage (I)Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun lookaheadClass-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun lookaheadCoverage (I)Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun rule (II)Ldev/skaldebane/kttf/LayoutChainedContextRule;
+}
+
+public final class dev/skaldebane/kttf/LayoutChainedContextRule {
+	public fun <init> (Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)Ldev/skaldebane/kttf/LayoutChainedContextRule;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/LayoutChainedContextRule;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutChainedContextRule;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBacktrack ()Ljava/util/List;
+	public final fun getInput ()Ljava/util/List;
+	public final fun getLookahead ()Ljava/util/List;
+	public final fun getLookups ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LayoutContext {
+	public final fun coverageLookups ()Ljava/util/List;
+	public final fun getCoverage ()Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun getFormat ()Ldev/skaldebane/kttf/LayoutContextFormat;
+	public final fun getInputCoverageCount ()I
+	public final fun getRuleSetCount ()I
+	public final fun inputClass-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun inputCoverage (I)Ldev/skaldebane/kttf/LayoutCoverage;
+	public final fun rule (II)Ldev/skaldebane/kttf/LayoutContextRule;
+}
+
+public final class dev/skaldebane/kttf/LayoutContextFormat : java/lang/Enum {
+	public static final field Classes Ldev/skaldebane/kttf/LayoutContextFormat;
+	public static final field Coverages Ldev/skaldebane/kttf/LayoutContextFormat;
+	public static final field Glyphs Ldev/skaldebane/kttf/LayoutContextFormat;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/LayoutContextFormat;
+	public static fun values ()[Ldev/skaldebane/kttf/LayoutContextFormat;
+}
+
+public final class dev/skaldebane/kttf/LayoutContextRule {
+	public fun <init> (Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;)Ldev/skaldebane/kttf/LayoutContextRule;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/LayoutContextRule;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutContextRule;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getInput ()Ljava/util/List;
+	public final fun getLookups ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LayoutCoverage {
+	public final fun contains-bgPkbKQ (I)Z
+	public final fun indexOf-bgPkbKQ (I)Ljava/lang/Integer;
+}
+
+public final class dev/skaldebane/kttf/LayoutDevice {
+	public final fun delta (II)Ljava/lang/Integer;
+	public final fun getEndSize ()Ljava/lang/Integer;
+	public final fun getInnerVariationIndex ()Ljava/lang/Integer;
+	public final fun getOuterVariationIndex ()Ljava/lang/Integer;
+	public final fun getStartSize ()Ljava/lang/Integer;
+	public final fun isVariationIndex ()Z
+}
+
+public final class dev/skaldebane/kttf/LayoutFeature {
+	public synthetic fun <init> (ILjava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-rAweNRQ ()I
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy-O3zr8-w (ILjava/util/List;)Ldev/skaldebane/kttf/LayoutFeature;
+	public static synthetic fun copy-O3zr8-w$default (Ldev/skaldebane/kttf/LayoutFeature;ILjava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutFeature;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLookupIndices ()Ljava/util/List;
+	public final fun getTag-rAweNRQ ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LayoutLanguage {
+	public synthetic fun <init> (ILjava/lang/Integer;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-rAweNRQ ()I
+	public final fun component2 ()Ljava/lang/Integer;
+	public final fun component3 ()Ljava/util/List;
+	public final fun copy-rrozv5k (ILjava/lang/Integer;Ljava/util/List;)Ldev/skaldebane/kttf/LayoutLanguage;
+	public static synthetic fun copy-rrozv5k$default (Ldev/skaldebane/kttf/LayoutLanguage;ILjava/lang/Integer;Ljava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutLanguage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFeatureIndices ()Ljava/util/List;
+	public final fun getRequiredFeatureIndex ()Ljava/lang/Integer;
+	public final fun getTag-rAweNRQ ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LayoutLookup {
+	public fun <init> (ILdev/skaldebane/kttf/LayoutLookupFlags;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ldev/skaldebane/kttf/LayoutLookupFlags;
+	public final fun copy (ILdev/skaldebane/kttf/LayoutLookupFlags;)Ldev/skaldebane/kttf/LayoutLookup;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/LayoutLookup;ILdev/skaldebane/kttf/LayoutLookupFlags;ILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutLookup;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFlags ()Ldev/skaldebane/kttf/LayoutLookupFlags;
+	public final fun getSubtableCount ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LayoutLookupFlags {
+	public fun <init> (ZZZZILjava/lang/Integer;)V
+	public final fun component1 ()Z
+	public final fun component2 ()Z
+	public final fun component3 ()Z
+	public final fun component4 ()Z
+	public final fun component5 ()I
+	public final fun component6 ()Ljava/lang/Integer;
+	public final fun copy (ZZZZILjava/lang/Integer;)Ldev/skaldebane/kttf/LayoutLookupFlags;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/LayoutLookupFlags;ZZZZILjava/lang/Integer;ILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutLookupFlags;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getIgnoreBaseGlyphs ()Z
+	public final fun getIgnoreLigatures ()Z
+	public final fun getIgnoreMarks ()Z
+	public final fun getMarkAttachmentType ()I
+	public final fun getMarkFilteringSet ()Ljava/lang/Integer;
+	public final fun getRightToLeft ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LayoutScript {
+	public synthetic fun <init> (ILdev/skaldebane/kttf/LayoutLanguage;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-rAweNRQ ()I
+	public final fun component2 ()Ldev/skaldebane/kttf/LayoutLanguage;
+	public final fun component3 ()Ljava/util/List;
+	public final fun copy-rrozv5k (ILdev/skaldebane/kttf/LayoutLanguage;Ljava/util/List;)Ldev/skaldebane/kttf/LayoutScript;
+	public static synthetic fun copy-rrozv5k$default (Ldev/skaldebane/kttf/LayoutScript;ILdev/skaldebane/kttf/LayoutLanguage;Ljava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutScript;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDefaultLanguage ()Ldev/skaldebane/kttf/LayoutLanguage;
+	public final fun getLanguages ()Ljava/util/List;
+	public final fun getTag-rAweNRQ ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LayoutSequenceLookup {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/skaldebane/kttf/LayoutSequenceLookup;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/LayoutSequenceLookup;IIILjava/lang/Object;)Ldev/skaldebane/kttf/LayoutSequenceLookup;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLookupIndex ()I
+	public final fun getSequenceIndex ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/LigatureSubstitution {
+	public synthetic fun <init> (ILjava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-R4h9C_w ()I
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy-BJ3L-QM (ILjava/util/List;)Ldev/skaldebane/kttf/LigatureSubstitution;
+	public static synthetic fun copy-BJ3L-QM$default (Ldev/skaldebane/kttf/LigatureSubstitution;ILjava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/LigatureSubstitution;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getComponents ()Ljava/util/List;
+	public final fun getGlyphId-R4h9C_w ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/MarkAnchor {
+	public fun <init> (ILdev/skaldebane/kttf/LayoutAnchor;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ldev/skaldebane/kttf/LayoutAnchor;
+	public final fun copy (ILdev/skaldebane/kttf/LayoutAnchor;)Ldev/skaldebane/kttf/MarkAnchor;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/MarkAnchor;ILdev/skaldebane/kttf/LayoutAnchor;ILjava/lang/Object;)Ldev/skaldebane/kttf/MarkAnchor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAnchor ()Ldev/skaldebane/kttf/LayoutAnchor;
+	public final fun getMarkClass ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/MathGlyphConstruction {
+	public fun <init> (Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ldev/skaldebane/kttf/MathValueRecord;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ldev/skaldebane/kttf/MathValueRecord;
+	public final fun copy (Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ldev/skaldebane/kttf/MathValueRecord;)Ldev/skaldebane/kttf/MathGlyphConstruction;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/MathGlyphConstruction;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ldev/skaldebane/kttf/MathValueRecord;ILjava/lang/Object;)Ldev/skaldebane/kttf/MathGlyphConstruction;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAssemblyItalicCorrection ()Ljava/lang/Integer;
+	public final fun getAssemblyItalicCorrectionValue ()Ldev/skaldebane/kttf/MathValueRecord;
+	public final fun getAssemblyParts ()Ljava/util/List;
+	public final fun getVariants ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/MathGlyphPart {
+	public synthetic fun <init> (IIIIZLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-R4h9C_w ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun component5 ()Z
+	public final fun copy-EiUFZXU (IIIIZ)Ldev/skaldebane/kttf/MathGlyphPart;
+	public static synthetic fun copy-EiUFZXU$default (Ldev/skaldebane/kttf/MathGlyphPart;IIIIZILjava/lang/Object;)Ldev/skaldebane/kttf/MathGlyphPart;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEndConnectorLength ()I
+	public final fun getFullAdvance ()I
+	public final fun getGlyphId-R4h9C_w ()I
+	public final fun getStartConnectorLength ()I
+	public fun hashCode ()I
+	public final fun isExtender ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/MathGlyphVariant {
+	public synthetic fun <init> (IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-R4h9C_w ()I
+	public final fun component2 ()I
+	public final fun copy-BJ3L-QM (II)Ldev/skaldebane/kttf/MathGlyphVariant;
+	public static synthetic fun copy-BJ3L-QM$default (Ldev/skaldebane/kttf/MathGlyphVariant;IIILjava/lang/Object;)Ldev/skaldebane/kttf/MathGlyphVariant;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAdvanceMeasurement ()I
+	public final fun getGlyphId-R4h9C_w ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/MathKern {
+	public fun <init> (Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;)Ldev/skaldebane/kttf/MathKern;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/MathKern;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/skaldebane/kttf/MathKern;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCorrectionHeights ()Ljava/util/List;
+	public final fun getKernValues ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/MathKernInfo {
+	public fun <init> (Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;)V
+	public final fun component1 ()Ldev/skaldebane/kttf/MathKern;
+	public final fun component2 ()Ldev/skaldebane/kttf/MathKern;
+	public final fun component3 ()Ldev/skaldebane/kttf/MathKern;
+	public final fun component4 ()Ldev/skaldebane/kttf/MathKern;
+	public final fun copy (Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;)Ldev/skaldebane/kttf/MathKernInfo;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/MathKernInfo;Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;Ldev/skaldebane/kttf/MathKern;ILjava/lang/Object;)Ldev/skaldebane/kttf/MathKernInfo;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBottomLeft ()Ldev/skaldebane/kttf/MathKern;
+	public final fun getBottomRight ()Ldev/skaldebane/kttf/MathKern;
+	public final fun getTopLeft ()Ldev/skaldebane/kttf/MathKern;
+	public final fun getTopRight ()Ldev/skaldebane/kttf/MathKern;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/MathLayout {
+	public final fun constant (I)Ljava/lang/Integer;
+	public final fun constantValue (I)Ldev/skaldebane/kttf/MathValueRecord;
+	public final fun getDelimitedSubFormulaMinHeight ()Ljava/lang/Integer;
+	public final fun getDisplayOperatorMinHeight ()Ljava/lang/Integer;
+	public final fun getMinConnectorOverlap ()Ljava/lang/Integer;
+	public final fun getScriptPercentScaleDown ()Ljava/lang/Integer;
+	public final fun getScriptScriptPercentScaleDown ()Ljava/lang/Integer;
+	public final fun horizontalConstruction-bgPkbKQ (I)Ldev/skaldebane/kttf/MathGlyphConstruction;
+	public final fun isExtendedShape-bgPkbKQ (I)Z
+	public final fun italicCorrection-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun italicCorrectionValue-bgPkbKQ (I)Ldev/skaldebane/kttf/MathValueRecord;
+	public final fun kernInfo-bgPkbKQ (I)Ldev/skaldebane/kttf/MathKernInfo;
+	public final fun topAccentAttachment-bgPkbKQ (I)Ljava/lang/Integer;
+	public final fun topAccentAttachmentValue-bgPkbKQ (I)Ldev/skaldebane/kttf/MathValueRecord;
+	public final fun verticalConstruction-bgPkbKQ (I)Ldev/skaldebane/kttf/MathGlyphConstruction;
+}
+
+public final class dev/skaldebane/kttf/MathValueRecord {
+	public fun <init> (ILdev/skaldebane/kttf/LayoutDevice;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun copy (ILdev/skaldebane/kttf/LayoutDevice;)Ldev/skaldebane/kttf/MathValueRecord;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/MathValueRecord;ILdev/skaldebane/kttf/LayoutDevice;ILjava/lang/Object;)Ldev/skaldebane/kttf/MathValueRecord;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDevice ()Ldev/skaldebane/kttf/LayoutDevice;
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/NameIds {
+	public static final field COMPATIBLE_FULL I
+	public static final field COPYRIGHT_NOTICE I
+	public static final field DARK_BACKGROUND_PALETTE I
+	public static final field DESCRIPTION I
+	public static final field DESIGNER I
+	public static final field DESIGNER_URL I
+	public static final field FAMILY I
+	public static final field FULL_NAME I
+	public static final field INSTANCE Ldev/skaldebane/kttf/NameIds;
+	public static final field LICENSE I
+	public static final field LICENSE_URL I
+	public static final field LIGHT_BACKGROUND_PALETTE I
+	public static final field MANUFACTURER I
+	public static final field POST_SCRIPT_CID I
+	public static final field POST_SCRIPT_NAME I
+	public static final field SAMPLE_TEXT I
+	public static final field SUBFAMILY I
+	public static final field TRADEMARK I
+	public static final field TYPOGRAPHIC_FAMILY I
+	public static final field TYPOGRAPHIC_SUBFAMILY I
+	public static final field UNIQUE_ID I
+	public static final field VARIATIONS_POST_SCRIPT_NAME_PREFIX I
+	public static final field VENDOR_URL I
+	public static final field VERSION I
+	public static final field WWS_FAMILY I
+	public static final field WWS_SUBFAMILY I
+}
+
+public final class dev/skaldebane/kttf/NamePlatformId : java/lang/Enum {
+	public static final field Custom Ldev/skaldebane/kttf/NamePlatformId;
+	public static final field Iso Ldev/skaldebane/kttf/NamePlatformId;
+	public static final field Macintosh Ldev/skaldebane/kttf/NamePlatformId;
+	public static final field Unicode Ldev/skaldebane/kttf/NamePlatformId;
+	public static final field Windows Ldev/skaldebane/kttf/NamePlatformId;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/NamePlatformId;
+	public static fun values ()[Ldev/skaldebane/kttf/NamePlatformId;
+}
+
+public final class dev/skaldebane/kttf/Names : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun get (I)Ldev/skaldebane/kttf/FontName;
+	public final fun getSize ()I
+	public final fun isEmpty ()Z
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public abstract class dev/skaldebane/kttf/OpenTypeLayout {
+	public abstract fun feature (I)Ldev/skaldebane/kttf/LayoutFeature;
+	public abstract fun feature-laVSPTA (I)Ldev/skaldebane/kttf/LayoutFeature;
+	public abstract fun featureSubstitution (II)Ldev/skaldebane/kttf/LayoutFeature;
+	public abstract fun featureVariationCondition (II)Ldev/skaldebane/kttf/FeatureVariationCondition;
+	public abstract fun featureVariationConditionCount (I)Ljava/lang/Integer;
+	public abstract fun getFeatureCount ()I
+	public abstract fun getFeatureVariationCount ()I
+	public abstract fun getLookupCount ()I
+	public abstract fun getScriptCount ()I
+	public abstract fun lookup (I)Ldev/skaldebane/kttf/LayoutLookup;
+	public abstract fun matchingFeatureVariationIndex ()Ljava/lang/Integer;
+	public abstract fun script (I)Ldev/skaldebane/kttf/LayoutScript;
+	public abstract fun script-laVSPTA (I)Ldev/skaldebane/kttf/LayoutScript;
+}
+
+public abstract interface class dev/skaldebane/kttf/OutlineSink {
+	public abstract fun close ()V
+	public abstract fun curveTo (FFFFFF)V
+	public abstract fun lineTo (FF)V
+	public abstract fun moveTo (FF)V
+	public abstract fun quadTo (FFFF)V
+}
+
+public final class dev/skaldebane/kttf/ParsedFontTable {
+	public final fun getKind ()Ldev/skaldebane/kttf/ParsedTableKind;
+	public final fun getTable ()Ldev/skaldebane/kttf/FontTable;
+	public final fun getTag-rAweNRQ ()I
+}
+
+public final class dev/skaldebane/kttf/ParsedFontTables : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public final fun contains-laVSPTA (I)Z
+	public final fun get (I)Ldev/skaldebane/kttf/ParsedFontTable;
+	public final fun get-laVSPTA (I)Ldev/skaldebane/kttf/ParsedFontTable;
+	public final fun getSize ()I
+	public fun iterator ()Ljava/util/Iterator;
+}
+
+public final class dev/skaldebane/kttf/ParsedTableKind : java/lang/Enum {
+	public static final field AppleAnchors Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field AppleBitmapData Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field AppleBitmapLocations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field AppleFeatures Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field AppleKerning Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field AppleMetamorphosis Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field AppleTracking Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field AxisVariations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Cff1 Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Cff2 Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Cmap Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field ColorBitmapData Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field ColorBitmapLocations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field ColorOutlines Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field ColorPalettes Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field EmbeddedBitmapData Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field EmbeddedBitmapLocations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field FontVariations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field GlyphDefinitions Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field GlyphPositioning Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field GlyphSubstitutions Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field GlyphVariations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Head Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field HorizontalHeader Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field HorizontalMetricVariations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field HorizontalMetrics Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Kerning Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Locations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Math Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field MaximumProfile Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field MetricVariations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Names Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Os2 Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Post Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field StandardBitmapGraphics Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field StyleAttributes Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field Svg Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field TrueTypeOutlines Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field VerticalHeader Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field VerticalMetricVariations Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field VerticalMetrics Ldev/skaldebane/kttf/ParsedTableKind;
+	public static final field VerticalOrigins Ldev/skaldebane/kttf/ParsedTableKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/skaldebane/kttf/ParsedTableKind;
+	public static fun values ()[Ldev/skaldebane/kttf/ParsedTableKind;
+}
+
+public final class dev/skaldebane/kttf/StyleAttributes {
+	public final fun axis (I)Ldev/skaldebane/kttf/StyleAxis;
+	public final fun getAxisCount ()I
+	public final fun getFallbackNameId ()Ljava/lang/Integer;
+	public final fun getValueCount ()I
+	public final fun value (I)Ldev/skaldebane/kttf/StyleAxisValue;
+}
+
+public final class dev/skaldebane/kttf/StyleAxis {
+	public synthetic fun <init> (IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-rAweNRQ ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun copy-rrozv5k (III)Ldev/skaldebane/kttf/StyleAxis;
+	public static synthetic fun copy-rrozv5k$default (Ldev/skaldebane/kttf/StyleAxis;IIIILjava/lang/Object;)Ldev/skaldebane/kttf/StyleAxis;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getNameId ()I
+	public final fun getOrdering ()I
+	public final fun getTag-rAweNRQ ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/StyleAxisValue {
+	public fun <init> (ILjava/util/List;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;ZZ)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/lang/Float;
+	public final fun component4 ()Ljava/lang/Float;
+	public final fun component5 ()Ljava/lang/Float;
+	public final fun component6 ()Ljava/lang/Float;
+	public final fun component7 ()Z
+	public final fun component8 ()Z
+	public final fun copy (ILjava/util/List;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;ZZ)Ldev/skaldebane/kttf/StyleAxisValue;
+	public static synthetic fun copy$default (Ldev/skaldebane/kttf/StyleAxisValue;ILjava/util/List;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;ZZILjava/lang/Object;)Ldev/skaldebane/kttf/StyleAxisValue;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAxisValues ()Ljava/util/List;
+	public final fun getLinkedValue ()Ljava/lang/Float;
+	public final fun getNominalValue ()Ljava/lang/Float;
+	public final fun getRangeMaximum ()Ljava/lang/Float;
+	public final fun getRangeMinimum ()Ljava/lang/Float;
+	public final fun getValueNameId ()I
+	public fun hashCode ()I
+	public final fun isElidable ()Z
+	public final fun isOlderSibling ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/skaldebane/kttf/SvgGlyphDocument {
+	public final fun copyInto ([BI)[B
+	public static synthetic fun copyInto$default (Ldev/skaldebane/kttf/SvgGlyphDocument;[BIILjava/lang/Object;)[B
+	public final fun get (I)B
+	public final fun getEndGlyphId-R4h9C_w ()I
+	public final fun getSize ()I
+	public final fun getStartGlyphId-R4h9C_w ()I
+}
+
+public final class dev/skaldebane/kttf/Tag {
+	public static final field Companion Ldev/skaldebane/kttf/Tag$Companion;
+	public static final synthetic fun box-impl (I)Ldev/skaldebane/kttf/Tag;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public static final fun getPackedValue-impl (I)J
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public static final fun isNull-impl (I)Z
+	public static final fun toByteArray-impl (I)[B
+	public static final fun toCharArray-impl (I)[C
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/skaldebane/kttf/Tag$Companion {
+	public final fun fromBytes--lXDLh8 ([B)I
+	public final fun fromBytesLossy--lXDLh8 ([B)I
+	public final fun of--uR7wjk (CCCC)I
+	public final fun parse--lXDLh8 (Ljava/lang/String;)I
+	public final fun parseOrNull-VOB3zuA (Ljava/lang/String;)Ldev/skaldebane/kttf/Tag;
+}
+
+public final class dev/skaldebane/kttf/UnicodeRanges {
+	public final fun contains (C)Z
+	public final fun contains (I)Z
+	public final fun containsRange (I)Z
+}
+

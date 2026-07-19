@@ -1,0 +1,17 @@
+.gradle/
+build/
+out/
+.kotlin/
+
+.idea/
+*.iml
+.vscode/
+
+local.properties
+.DS_Store
+
+node_modules/
+tools/ttf-parser-oracle/target/
+
+*.hprof
+hs_err_pid*

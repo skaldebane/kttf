@@ -1,0 +1,8 @@
+[package]
+name = "ttf-parser-oracle"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+ttf-parser = { git = "https://github.com/harfbuzz/ttf-parser", rev = "6e75b3c539ef6bfbacb020aaa3226414ddea7ce5" }
