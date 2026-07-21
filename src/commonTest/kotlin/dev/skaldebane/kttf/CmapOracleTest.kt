@@ -45,23 +45,25 @@ class CmapOracleTest {
 
     private companion object {
         private val EXPECTED_ORACLE =
-            "schema\t1\n" +
-                "upstream\t6e75b3c539ef6bfbacb020aaa3226414ddea7ce5\n" +
-                "collection\tnone\n" +
-                "face_index\t0\n" +
-                "face\tok\n" +
-                "units_per_em\t1000\n" +
-                "bounds\t-50\t-200\t1200\t900\n" +
-                "hhea\t800\t-200\t100\n" +
-                "glyph_count\t3\n" +
-                "table\tcmap\t44\n" +
-                "table\thead\t54\n" +
-                "table\thhea\t36\n" +
-                "table\thmtx\tnone\n" +
-                "table\tmaxp\t6\n" +
-                "cmap_count\t1\n" +
-                "subtable\t0\tWindows\t1\t4\ttrue\n" +
-                "codepoint\t0\t65\t1\n" +
-                "mapping\t65\t1\n"
+            """
+            schema	1
+            upstream	6e75b3c539ef6bfbacb020aaa3226414ddea7ce5
+            collection	none
+            face_index	0
+            face	ok
+            units_per_em	1000
+            bounds	-50	-200	1200	900
+            hhea	800	-200	100
+            glyph_count	3
+            table	cmap	44
+            table	head	54
+            table	hhea	36
+            table	hmtx	none
+            table	maxp	6
+            cmap_count	1
+            subtable	0	Windows	1	4	true
+            codepoint	0	65	1
+            mapping	65	1
+            """.trimIndent() + "\n"
     }
 }

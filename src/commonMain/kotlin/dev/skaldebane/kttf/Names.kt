@@ -161,33 +161,14 @@ private fun windowsLanguage(id: Int): FontLanguage = WINDOWS_LANGUAGES[id] ?: Fo
 
 private val WINDOWS_LANGUAGES: Map<Int, FontLanguage> by lazy {
     buildMap {
-        var offset = 0
-        while (offset < WINDOWS_LANGUAGE_DATA.length) {
-            var id = 0
-            repeat(4) {
-                val digit = WINDOWS_LANGUAGE_DATA[offset++].hexDigit() ?: return@buildMap
-                id = id * 16 + digit
-            }
-            if (offset >= WINDOWS_LANGUAGE_DATA.length || WINDOWS_LANGUAGE_DATA[offset++] != '|') return@buildMap
-            val languageStart = offset
-            while (offset < WINDOWS_LANGUAGE_DATA.length && WINDOWS_LANGUAGE_DATA[offset] != '|') offset++
-            if (offset >= WINDOWS_LANGUAGE_DATA.length) return@buildMap
-            val language = WINDOWS_LANGUAGE_DATA.substring(languageStart, offset++)
-            val regionStart = offset
-            while (offset < WINDOWS_LANGUAGE_DATA.length && WINDOWS_LANGUAGE_DATA[offset] != '\n') offset++
-            val region = WINDOWS_LANGUAGE_DATA.substring(regionStart, offset)
-            put(id, FontLanguage(language, region))
-            if (offset < WINDOWS_LANGUAGE_DATA.length) offset++
+        for (line in WINDOWS_LANGUAGE_DATA.lineSequence()) {
+            val fields = line.split('|', limit = 3)
+            if (fields.size != 3) continue
+            val id = fields[0].toIntOrNull(16) ?: continue
+            put(id, FontLanguage(fields[1], fields[2]))
         }
     }
 }
-
-private fun Char.hexDigit(): Int? =
-    when (this) {
-        in '0'..'9' -> code - '0'.code
-        in 'A'..'F' -> code - 'A'.code + 10
-        else -> null
-    }
 
 // Microsoft OpenType name-table LANGIDs, matching the pinned upstream language.rs.
 private const val WINDOWS_LANGUAGE_DATA: String =

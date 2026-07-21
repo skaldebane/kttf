@@ -356,7 +356,7 @@ internal fun testPostTable(): ByteArray =
         .uint16(258)
         .uint16(1)
         .int8(6)
-        .raw(byteArrayOf(99, 117, 115, 116, 111, 109))
+        .raw("custom".encodeToByteArray())
         .build()
 
 internal fun testVheaTable(): ByteArray {
