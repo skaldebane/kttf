@@ -1,0 +1,165 @@
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  jvm:
+    name: JVM, JS, Wasm and checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@0723195856401067f7a2779048b490ace7a47d7c # v5.0.2
+
+      - name: Run JVM, JS, Wasm, Android host tests and checks
+        run: >-
+          ./gradlew
+          jvmTest jsNodeTest wasmJsNodeTest wasmWasiNodeTest testAndroidHostTest
+          ktlintCheck checkKotlinAbi verifyTtfParserOracle verifyCmapDifferential
+          --continue --console=plain
+
+      - name: Upload test reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: test-reports-jvm-js-wasm-${{ github.run_attempt }}
+          retention-days: 7
+          path: |
+            build/test-results/
+            build/reports/tests/
+
+      - name: Capture JS failure environment
+        if: ${{ failure() }}
+        run: |
+          mkdir -p build/ci-diagnostics
+          {
+            java -version
+            ./gradlew --version
+            echo "Runner Node.js:"
+            node --version
+            for node in "$HOME"/.gradle/nodejs/*/bin/node "$HOME"/.gradle/wasm/nodejs/*/bin/node; do
+              if [ -x "$node" ]; then
+                echo "$node"
+                "$node" --version
+              fi
+            done
+          } > build/ci-diagnostics/toolchains.txt 2>&1
+
+      - name: Upload JS failure diagnostics
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: js-failure-diagnostics-${{ github.run_attempt }}
+          retention-days: 7
+          path: |
+            build/ci-diagnostics/
+            build/js/packages/*/kotlin/
+            build/js/packages/*/package.json
+
+  linux:
+    name: Linux native tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@0723195856401067f7a2779048b490ace7a47d7c # v5.0.2
+
+      - name: Run Linux native tests
+        run: ./gradlew linuxX64Test --continue --console=plain
+
+      - name: Upload test reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: test-reports-linux-${{ github.run_attempt }}
+          retention-days: 7
+          path: |
+            build/test-results/
+            build/reports/tests/
+
+  apple:
+    name: Apple tests
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@0723195856401067f7a2779048b490ace7a47d7c # v5.0.2
+
+      - name: Run Apple tests
+        run: ./gradlew macosArm64Test iosSimulatorArm64Test --continue --console=plain
+
+      - name: Upload test reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: test-reports-apple-${{ github.run_attempt }}
+          retention-days: 7
+          path: |
+            build/test-results/
+            build/reports/tests/
+
+  windows:
+    name: Windows native tests
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@0723195856401067f7a2779048b490ace7a47d7c # v5.0.2
+
+      - name: Run Windows native tests
+        run: ./gradlew mingwX64Test --continue --console=plain
+
+      - name: Upload test reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: test-reports-windows-${{ github.run_attempt }}
+          retention-days: 7
+          path: |
+            build/test-results/
+            build/reports/tests/

@@ -15,7 +15,7 @@ plugins {
 }
 
 group = "dev.skaldebane"
-version = "0.1.0-SNAPSHOT"
+version = "0.1.0-dev.1"
 
 kotlin {
     explicitApi()
@@ -84,7 +84,26 @@ ktlint {
     version.set(libs.versions.ktlint.asProvider())
 }
 
+tasks.withType<Test>().configureEach {
+    testLogging {
+        events("failed")
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+    }
+}
+
 publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/skaldebane/kttf")
+
+            credentials {
+                username = providers.environmentVariable("GITHUB_ACTOR").orNull
+                password = providers.environmentVariable("GITHUB_TOKEN").orNull
+            }
+        }
+    }
+
     publications.withType<MavenPublication>().configureEach {
         pom {
             name.set("kttf")
@@ -103,7 +122,7 @@ publishing {
                 developer {
                     id.set("skaldebane")
                     name.set("Houssam Elbadissi")
-                    url.set("https://github.com/skaldebane")
+                    url.set("https://skaldebane.dev")
                 }
             }
 
