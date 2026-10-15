@@ -1,0 +1,76 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - 'v[0-9]*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate release version
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Check tag matches library version
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          build = Path('build.gradle.kts').read_text()
+          match = re.search(r'^version\s*=\s*"([^"]+)"\s*$', build, re.MULTILINE)
+          if match is None:
+              raise SystemExit('Could not find the declared library version')
+          expected = f'v{match.group(1)}'
+          actual = os.environ['RELEASE_TAG']
+          if actual != expected:
+              raise SystemExit(f'Tag {actual!r} does not match {expected!r}')
+          print(f'Verifying {actual}')
+          PY
+
+  check:
+    name: Check release
+    needs: validate
+    uses: $/.github/workflows/check.yml
+
+  publish:
+    name: Publish to GitHub Packages
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      packages: write # Upload the tagged release artifacts to GitHub Packages.
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@0723195856401067f7a2779048b490ace7a47d7c # v5.0.2
+        with:
+          cache-disabled: true
+
+      - name: Publish all target publications
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew publishAllPublicationsToGitHubPackagesRepository --console=plain
